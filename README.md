@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Slice - Local Sample Browser
+
+Slice is a desktop-inspired web application for browsing and managing your local audio sample library. Similar to Splice Sounds, but designed to work with your existing library of royalty-free samples stored locally on your machine.
+
+## Features
+
+- **Sample Browser**: Browse your audio samples by category, sample pack, or file type
+- **Audio Preview**: Preview samples directly in the app with waveform visualization
+- **Favorites System**: Mark samples as favorites for quick access
+- **Filtering System**: Filter samples by multiple criteria
+- **Local Storage**: Works with your existing folder structure of audio samples
+
+## Technology Stack
+
+- **Next.js**: React framework with App Router
+- **TypeScript**: For type-safe code
+- **TailwindCSS**: For styling
+- **Howler.js**: Audio playback
+- **LocalStorage API**: For storing user preferences
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.x or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/slice.git
+cd slice
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open your browser and navigate to `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Go to the Settings page and set your Sample Directory path
+2. Browse your samples in the Browser page
+3. Preview samples by clicking on them
+4. Add samples to your favorites by clicking the heart icon
 
-## Learn More
+## Demo Limitations
 
-To learn more about Next.js, take a look at the following resources:
+This web app is currently a demo with the following limitations:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- It uses mock data instead of reading actual files from your file system
+- Audio samples are loaded from external URLs for demonstration purposes
+- In a full implementation, it would use the File System API or be wrapped in a desktop application using Electron or Tauri
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Roadmap
 
-## Deploy on Vercel
+- Add waveform visualization for audio files
+- Implement tagging system for custom organization
+- Add BPM and key detection for music samples
+- Integrate with a desktop framework for full file system access
+- Add drag and drop support to DAWs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
